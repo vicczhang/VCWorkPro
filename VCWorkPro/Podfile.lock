@@ -1,0 +1,18 @@
+PODS:
+  - JSONModel (1.7.0)
+  - MBProgressHUD (1.0.0)
+  - ReactiveObjC (2.1.2)
+
+DEPENDENCIES:
+  - JSONModel
+  - MBProgressHUD
+  - ReactiveObjC
+
+SPEC CHECKSUMS:
+  JSONModel: 840bc0fcffb24b8454d2c026bf26fea454b8e98d
+  MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  ReactiveObjC: 7b6782ae39f9ac0f57205c3b0c0b69b9dd7048c0
+
+PODFILE CHECKSUM: e526f52f896afa355f3dd6d98f0e0aa289315d8b
+
+COCOAPODS: 1.2.0.beta.1

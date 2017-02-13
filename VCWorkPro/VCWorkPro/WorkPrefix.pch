@@ -1,0 +1,17 @@
+//
+//  WorkPrefix.pch
+//  VCWorkPro
+//
+//  Created by Apple on 2017/2/13.
+//  Copyright © 2017年 Vic. All rights reserved.
+//
+
+#ifndef WorkPrefix_pch
+#define WorkPrefix_pch
+
+#ifdef __OBJC__
+#import "AppDelegate.h"
+#import "WorkPro.h"
+#endif
+
+#endif /* WorkPrefix_pch */
