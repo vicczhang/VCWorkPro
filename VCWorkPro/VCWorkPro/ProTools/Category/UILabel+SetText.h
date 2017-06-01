@@ -27,4 +27,14 @@
  */
 - (void)addShowColor:(UIColor *)color;
 
+
+/**
+ 设置
+
+ @param fontSize fontsize
+ @param textColor textcolor
+ */
+- (void)setProperty:(CGFloat)fontSize textColor:(UIColor *)textColor;
+
+- (void)setSpecialStr:(NSString *)speStr Color:(UIColor *)color FontSize:(CGFloat)size;
 @end

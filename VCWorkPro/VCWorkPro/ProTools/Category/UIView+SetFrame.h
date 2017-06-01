@@ -171,4 +171,9 @@
  设置底部线条
  */
 - (void)setBottomLine;
+
+
+- (void)relativeRightBottom:(UIView *)referView;
+
+- (void)addRightArrows;
 @end

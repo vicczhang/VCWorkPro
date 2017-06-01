@@ -53,4 +53,9 @@
  @return 返回举报对应的请求字符
  */
 - (NSString *)toReportRequestString;
+
+-(NSArray *)interceptionOfsubString:(NSString*)subStr;
+
+
+- (NSString* )formatFirstElement;
 @end

@@ -63,4 +63,9 @@
  @param selectImgString 选中图片
  */
 - (void)setSingleSelectionNormalImage:(NSString *)normalImgString selectImage:(NSString *)selectImgString;
+
+- (void)changeLocation;
+
+- (void)closeUserAction;
+- (void)openUserAction;
 @end

@@ -15,7 +15,7 @@
     if (self = [super initWithCoder:aDecoder]) {
         // 初始化 Cell View
         _didInitializeCellView = NO;
-        [self layoutIfNeeded];
+//        [self layoutIfNeeded];
         [self initialize];
     }
     return self;
@@ -26,7 +26,7 @@
     if (self = [super init]) {
         //初始化 Cell View
         _didInitializeCellView = NO;
-        [self layoutIfNeeded];
+//        [self layoutIfNeeded];
         [self initialize];
     }
     return self;
@@ -36,7 +36,7 @@
     if (self = [super initWithFrame:frame]) {
         //初始化 Cell View
         _didInitializeCellView = NO;
-        [self layoutIfNeeded];
+//        [self layoutIfNeeded];
         [self initialize];
     }
     return self;
@@ -46,7 +46,7 @@
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
         // 初始化 Cell View
         _didInitializeCellView = NO;
-        [self layoutIfNeeded];
+//        [self layoutIfNeeded];
         [self initialize];
     }
     return self;

@@ -26,5 +26,14 @@
     [self addObjectsFromArray:data];
 }
 
+- (void)loadDictResourcePath:(NSString *)path{
+    NSString *filePath = [[NSBundle mainBundle] pathForResource:path ofType:@"plist"];
+    
+    
+    NSMutableArray* data = [ListModel arrayOfModelsFromDictionaries:[NSArray arrayWithContentsOfFile:filePath] error:nil];
+    [self removeAllObjects];
+    [self addObjectsFromArray:data];
+
+}
 
 @end

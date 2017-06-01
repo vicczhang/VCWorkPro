@@ -69,11 +69,11 @@
         ListModel* model = dataArray[indexPath.row];
         if ([model.cellType isEqualToString:@"0"]) {
             cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-            cell.textLabel.text = model.titleText;
-            cell.detailTextLabel.text = model.detailText;
+            cell.textLabel.text = model.text;
+            cell.detailTextLabel.text = model.attachText;
         }else if ([model.cellType isEqualToString:@"1"]){
             cell.accessoryType = UITableViewCellAccessoryNone;
-            cell.textLabel.text = model.titleText;
+            cell.textLabel.text = model.text;
         }else if ([model.cellType isEqualToString:@"2"]){
             [cell reloadCellViewWithModel:model];
         }
@@ -94,7 +94,7 @@
     NSMutableArray* dataArray = _list[indexPath.section];
     ListModel* model = dataArray[indexPath.row];
     if ([model.cellType isEqualToString:@"0"]) {
-        model.detailText = @"已设置";
+        model.attachText = @"已设置";
         [tableView reloadRowsAtIndexPaths:[NSArray arrayWithObjects:indexPath,nil] withRowAnimation:UITableViewRowAnimationAutomatic];
     }
     

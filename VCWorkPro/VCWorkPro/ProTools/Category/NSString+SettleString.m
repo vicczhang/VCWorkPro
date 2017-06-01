@@ -71,4 +71,54 @@
         return @"Other";
     }
 }
+
+
+-(NSArray *)interceptionOfsubString:(NSString*)subStr
+{
+    if (!subStr) {
+        DebugLog(@"ERROR:string=Nil");
+        return [NSArray array];
+    }
+    
+    NSMutableArray* testArray=[[NSMutableArray alloc]initWithCapacity:20];
+    NSInteger count= [[self componentsSeparatedByString:subStr] count]-1;
+    
+    NSString * testStr=self;
+    
+    /*解析:录入数组*/
+    for (int i=0; i<count; i++) {
+        NSRange tempRange=[testStr rangeOfString:subStr];
+        [testArray addObject:[NSValue valueWithRange:tempRange]];
+        if (i!=count-1) {
+            tempRange.location=tempRange.location+tempRange.length;
+            tempRange.length=testStr.length-subStr.length;
+            testStr=[testStr substringFromIndex:tempRange.location];
+        }
+    }
+    
+    NSMutableArray* requestArray = [NSMutableArray array];
+    /*反向解析*/
+    for (int i=0; i<count; i++) {
+        NSValue* value=[testArray objectAtIndex:i];
+        NSRange tempRange=value.rangeValue;
+        for (int j=0; j<i; j++) {
+            NSValue* jvalue=[testArray objectAtIndex:j];
+            NSRange jRange=jvalue.rangeValue;
+            tempRange.location+=jRange.location+subStr.length;
+        }
+        [requestArray addObject:[NSValue valueWithRange:tempRange]];
+    }
+    return requestArray;
+}
+
+- (NSString* )formatFirstElement{
+    if (self.length>0) {
+        NSString* str = [self substringWithRange:NSMakeRange(0, 1)];
+        if ([str isEqualToString:@"/"]) {
+            return [self substringFromIndex:1];
+        }
+        return self;
+    }
+    return self;
+}
 @end

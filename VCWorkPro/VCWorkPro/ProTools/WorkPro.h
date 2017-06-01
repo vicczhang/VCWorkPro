@@ -21,14 +21,24 @@
 #import "UITableView+SetLine.h"
 #import "UILabel+SetText.h"
 #import "UICollectionViewFlowLayout+Item.h"
+//#import "UIViewController+Navi.h"
+//#import "UINavigationBar+Awesome.h"
+//#import "UIScrollView+Setting.h"
 
 #import "BaseTableViewCell.h"
 #import "StaticBaseListVC.h"
 #import "AlterHandleHelper.h"
 #import "BaseTextField.h"
+#import "PublicUtil.h"
+
+#define defaultOffset 13
+#define defaultTextColor [UIColor blackColor]
+#define defaultgrayColor [UIColor lightGrayColor]
 
 /* App Deleagte */
 #define appdelegate ((AppDelegate *)[[UIApplication sharedApplication] delegate])
+
+#define userLogin appdelegate.userInfoModel.nickname!=nil
 
 /* App Debug */
 #ifdef DEBUG

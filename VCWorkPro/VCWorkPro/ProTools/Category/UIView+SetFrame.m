@@ -141,6 +141,17 @@
     [self addSubview:line];
 }
 
+- (void)relativeRightBottom:(UIView *)referView{
+    
+    [self setFrameX:CGRectGetWidth(referView.frame) - CGRectGetWidth(self.frame) - 5 y:CGRectGetHeight(referView.frame) - CGRectGetHeight(self.frame) - 2];
+}
 
+- (void)addRightArrows{
+    UIImageView* iv = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"my_tp_next_over"]];
+    [iv sizeToFit];
+    [iv setFrameX:CGRectGetWidth(self.frame) - CGRectGetWidth(iv.frame) - 10];
+    [iv setCenterY:CGRectGetHeight(self.frame)/2];
+    [self addSubview:iv];
+}
 
 @end

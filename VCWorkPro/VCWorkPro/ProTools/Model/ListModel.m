@@ -9,5 +9,17 @@
 #import "ListModel.h"
 
 @implementation ListModel
-
+- (CGFloat)getWidth{
+    if (_imgWidth) {
+        return [_imgWidth floatValue];
+    }
+    return 0;
+}
+- (CGFloat)getHeight{
+    if (_imgHeight) {
+        return [_imgHeight floatValue];
+    }
+    
+    return 0;
+}
 @end

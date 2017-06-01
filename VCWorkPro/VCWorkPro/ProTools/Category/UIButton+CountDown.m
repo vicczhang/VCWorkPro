@@ -69,4 +69,17 @@
     [self setImage:[UIImage imageNamed:selectImgString] forState:UIControlStateSelected];
 }
 
+- (void)changeLocation{
+    
+    [self setTitleEdgeInsets:UIEdgeInsetsMake(3, -self.imageView.image.size.width -2, 0, self.imageView.image.size.width)];
+    [self setImageEdgeInsets:UIEdgeInsetsMake(0, self.titleLabel.bounds.size.width, 0, -self.titleLabel.bounds.size.width -2)];
+}
+
+- (void)closeUserAction{
+    self.userInteractionEnabled = NO;
+}
+- (void)openUserAction{
+    self.userInteractionEnabled = YES;
+}
+
 @end

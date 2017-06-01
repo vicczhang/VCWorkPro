@@ -10,17 +10,15 @@
 
 @interface ListModel : JSONModel
 
-/**
- 列表类型
- 0：带右边箭头
- 1：无箭头
- 2：自定义cell(单一label)
- 3：自定义cell 
- */
-@property (nonatomic, strong)NSString<Optional>* cellType;
+@property (nonatomic, copy)NSString<Optional>* cellType;
+@property (nonatomic, copy)NSString<Optional>* text;
+@property (nonatomic, copy)NSString<Optional>* image;
+@property (nonatomic, copy)NSString<Optional>* pushVC;
+@property (nonatomic, copy)NSString<Optional>* attachText;
 
-@property (nonatomic, strong)NSString<Optional>* titleText;
-@property (nonatomic, strong)NSString<Optional>* detailText;
+@property (nonatomic, copy)NSString<Optional>* imgWidth;
+@property (nonatomic, copy)NSString<Optional>* imgHeight;
 
-@property (nonatomic, strong)NSString<Optional>* cellImage;
+- (CGFloat)getWidth;
+- (CGFloat)getHeight;
 @end

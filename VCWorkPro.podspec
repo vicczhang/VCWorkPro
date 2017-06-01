@@ -13,4 +13,5 @@ s.frameworks = 'UIKit','Foundation'
 s.dependency "JSONModel"
 s.dependency "ReactiveObjC"
 s.dependency "MBProgressHUD"
+s.dependency "SDWebImage"
 end
